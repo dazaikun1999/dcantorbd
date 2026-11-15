@@ -1,0 +1,11 @@
+rules_version = '2';
+service cloud.firestore {
+  match /databases/{database}/documents {
+    match /site_settings/{docId} {
+      // Allow public read so any visitor, browser, and device displays custom banners, logo, and favicon
+      allow read: if true;
+      // Allow writes to site settings documents (branding, hero_banners)
+      allow write: if true;
+    }
+  }
+}

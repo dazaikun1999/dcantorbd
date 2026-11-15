@@ -1,0 +1,8 @@
+{
+  "name": "D'CANTOR DHAKA",
+  "description": "Boutique Decant Perfumery in Dhaka offering authentic luxury and niche decants from 3ml to 15ml.",
+  "requestFramePermissions": [],
+  "majorCapabilities": [
+    "MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"
+  ]
+}

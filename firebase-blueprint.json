@@ -1,0 +1,50 @@
+{
+  "entities": {
+    "site_settings": {
+      "title": "Site Settings",
+      "description": "Global website configuration including custom logo and browser favicon",
+      "type": "object",
+      "properties": {
+        "logo": {
+          "type": "string",
+          "description": "Base64 data URL or remote image URL for the boutique brand logo"
+        },
+        "favicon": {
+          "type": "string",
+          "description": "Base64 data URL or remote icon URL for the browser tab favicon"
+        },
+        "updatedAt": {
+          "type": "string",
+          "description": "ISO timestamp of the last update"
+        }
+      },
+      "required": []
+    },
+    "hero_banners": {
+      "title": "Hero Banners",
+      "description": "Global hero slideshow banners with customizable marketing copy, uploaded photo assets, and layout styling",
+      "type": "object",
+      "properties": {
+        "slides": {
+          "type": "array",
+          "description": "Array of banner slide items"
+        },
+        "updatedAt": {
+          "type": "string",
+          "description": "ISO timestamp of the last update"
+        }
+      },
+      "required": []
+    }
+  },
+  "firestore": {
+    "/site_settings/branding": {
+      "schema": "site_settings",
+      "description": "Global boutique branding assets (logo, favicon)"
+    },
+    "/site_settings/hero_banners": {
+      "schema": "hero_banners",
+      "description": "Global hero carousel slides displayed universally to all visitors"
+    }
+  }
+}
